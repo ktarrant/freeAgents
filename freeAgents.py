@@ -1,71 +1,83 @@
 import time
+import dataLoader
 
-with open("CrowdsourcingResults.csv", "r") as fobj:
-	lines = fobj.read().split("\r")
-	headers = [field.strip() for field in lines[0].split(",")]
-	players = [	{
-			stat.strip(): value.strip() for (stat, value) 
-				in zip(headers, line.split(","))
-		}
-		for line in lines[1:]
-	]
+positions = dataLoader.loadData("CrowdsourcingResults.csv")
 
-positions = {}
-for player in players:
-	poslist = player["Position"].split("/")
-	for pos in poslist:
-		if pos not in positions:
-			positions[pos] = []
-		positions[pos] += [ player ]
-
-def printFields(fields, msgWidth=80):
-	fieldWidth = msgWidth / len(fields)
-	frmt = " %-" + str(fieldWidth - 1) + "s"
-	print "|".join([frmt % field for field in fields])
-
-def printSeparator(msgWidth=80):
-	print "-" * msgWidth
-
-printFields(["Position", "# Players", "Total fWAR"])
-printSeparator()
-for position in positions:
-	matchCount = len(positions[position])
-	wars = [float(player["2015 fWAR"]) for player in positions[position]]
-	totalWar = sum(wars)
-	printFields([position, matchCount, totalWar])
+dataLoader.printPositions(positions)
+print ""
 print ""
 
-def forEachPosition(keyList=[pos for pos in positions]):
-	for player in positions[keyList[0]]:
-		if len(keyList) == 1:
-			yield [player]
-		else:
-			for combo in forEachPosition(keyList[1:]):
-				if player in combo:
-					continue
-				else:
-					yield [ player ] + combo
+def getHighestWar(positions, pos, usedPlayers=[]):
+	bestPlayer = None
+	def doBest(pos, bestPlayer=None):
+		for player in positions[pos]:
+			if player in usedPlayers:
+				continue
+			elif bestPlayer == None:
+				bestPlayer = player
+			else:
+				if player["Exp. 2016 fWAR"] > bestPlayer["Exp. 2016 fWAR"]:
+					bestPlayer = player
+		return bestPlayer
 
-posNames = [pos for pos in positions]
-comboLens = [len(positions[pos]) for pos in positions]
-comboLen = reduce(lambda x,y: x*y, comboLens)
-print "# of Combinations:", comboLen
+	if pos == "DH":
+		# Any player can be a DH
+		for position in positions:
+			if position != "P":
+				bestPlayer = doBest(position, bestPlayer)
+	else:
+		bestPlayer = doBest(pos)
 
-lastCount = 0
-curCount = 0
-startTime = 0
-def updateProg():
-	global curCount, lastCount, startTime
-	curCount += 1
-	if startTime == 0:
-		startTime = time.clock()
-	if float(curCount - lastCount) / float(comboLen) > .001:
-		lastCount = curCount
-		percent = float(lastCount) / float(comboLen)
-		now = time.clock()
-		timeLeft = ((1.0 - percent) * (now - startTime) / percent)
-		print "%.4f %% : ~ %5.2f seconds left" % (percent * 100.0, timeLeft)
+	return bestPlayer
 
-for combo in forEachPosition():
-	updateProg()
+dataLoader.printFields(["Positions", "Player", "Exp. 2016 fWAR", "Exp. Salary"])
+dataLoader.printSeparator()
+totalWar = 0
+totalSalary = 0
+usedPlayers = []
+positionOrder = ["CF", "LF", "RF", "1B", "2B", "3B", "SS", "C", "P", "P", "P", "DH"]
+for pos in positionOrder:
+	bestPlayer = getHighestWar(positions, pos, usedPlayers)
+	dataLoader.printFields([pos, bestPlayer["Player"], bestPlayer["Exp. 2016 fWAR"], bestPlayer["Expected 2016 AAV"]])
+	if bestPlayer != None:
+		usedPlayers += [ bestPlayer ]
+		totalWar += float(bestPlayer["Exp. 2016 fWAR"])
+		totalSalary += float(bestPlayer["Expected 2016 AAV"])
+
+dataLoader.printSeparator()
+dataLoader.printFields(["Total", "", totalWar, totalSalary])
+
+# def forEachPosition(keyList=[pos for pos in positions]):
+# 	for player in positions[keyList[0]]:
+# 		if len(keyList) == 1:
+# 			yield [player]
+# 		else:
+# 			for combo in forEachPosition(keyList[1:]):
+# 				if player in combo:
+# 					continue
+# 				else:
+# 					yield [ player ] + combo
+
+# posNames = [pos for pos in positions]
+# comboLens = [len(positions[pos]) for pos in positions]
+# comboLen = reduce(lambda x,y: x*y, comboLens)
+# print "# of Combinations:", comboLen
+
+# lastCount = 0
+# curCount = 0
+# startTime = 0
+# def updateProg():
+# 	global curCount, lastCount, startTime
+# 	curCount += 1
+# 	if startTime == 0:
+# 		startTime = time.clock()
+# 	if float(curCount - lastCount) / float(comboLen) > .001:
+# 		lastCount = curCount
+# 		percent = float(lastCount) / float(comboLen)
+# 		now = time.clock()
+# 		timeLeft = ((1.0 - percent) * (now - startTime) / percent)
+# 		print "%.4f %% : ~ %5.2f seconds left" % (percent * 100.0, timeLeft)
+
+# for combo in forEachPosition():
+# 	updateProg()
 
