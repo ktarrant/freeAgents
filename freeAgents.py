@@ -8,7 +8,7 @@ dataLoader.printPositions(positions)
 print ""
 print ""
 
-bold = lambda val: ("_" + str(val) + "_")
+bold = lambda val: ("*" + str(val) + "*")
 
 def getHighestKey(positions, pos, key, usedPlayers=[]):
 	bestPlayer = None
@@ -38,7 +38,7 @@ dataLoader.printSeparator(4)
 totalWar = 0
 totalSalary = 0
 usedPlayers = []
-positionOrder = ["CF", "LF", "RF", "1B", "2B", "3B", "SS", "C", "P", "P", "P", "P", "P", "DH"]
+positionOrder = ["CF", "LF", "RF", "1B", "2B", "3B", "SS", "C", "P", "P", "P", "P", "P"]
 for pos in positionOrder:
 	bestPlayer = getHighestKey(positions, pos, "Exp. 2016 fWAR", usedPlayers)
 	dataLoader.printFields([pos, bestPlayer["Player"], bestPlayer["Exp. 2016 fWAR"], bestPlayer["Expected 2016 AAV"]])

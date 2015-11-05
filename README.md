@@ -2,9 +2,9 @@
 
 This is an attempt to build a competitive baseball team using only free agents. The inspiration for this is partly inspired by ["2015 All-Star Game Rosters if determined by fWAR"](https://www.reddit.com/r/baseball/comments/34xw91/2015_allstar_game_rosters_if_determined_by_fwar/) posted by /u/rjaspa and partly inspired by ["FanGraphs Crowd: The Top 82 Free Agents"](http://www.fangraphs.com/blogs/fangraphs-crowd-the-top-82-free-agents/).
 
-Some notes on my analysis: "Expected Salary" comes from the Fangraphs Crowd article spreadsheet. For "Expected 2016 fWAR", I used a combination of 2015 and 2014 fWAR with 2015 performance carrying a little more weight. To simplify the analysis, I'm not moving players around the field. Meaning, if the FanGraphs spreadsheet lists them as a LF/CF, those are the only spots I would put them - not RF, for example.
+Some notes on my analysis: "Expected Salary" comes from the Fangraphs Crowd article spreadsheet. For "Expected 2016 fWAR", I used a combination of 2015 and 2014 fWAR with 2015 performance carrying a little more weight. To simplify the analysis, I'm not moving players around the field. Meaning, if the FanGraphs spreadsheet lists them as a LF/CF, those are the only spots I would put them - not RF, for example. I am not selecting a DH for this team, because their true value would be less compared to their listed fWAR since they would not be playing defense (unless I selected someone who was a DH last year). Also "Fuck The DH".
 
-The positions available in this 2016 FA class are distributed like this:
+The positions of the 82 free agents listed in the FanGraphs article are distributed like this:
 
 | Position                        | # Players                       | Total Exp. fWAR                 |
 |---------------------------------|---------------------------------|---------------------------------|
@@ -37,11 +37,10 @@ If we were to just select the player with the highest expected fWAR for each pos
 | P                       | Johnny Cueto            | 4.266666667             | 21.01016949             |
 | P                       | Jordan Zimmermann       | 3.766666667             | 20.79234973             |
 | P                       | John Lackey             | 3.2                     | 14.87323944             |
-| DH                      | Alex Gordon             | 4.066666667             | 18.64                   |
-| _Total_                 |                         | _54.433333334_          | _256.457341869_         |
+| *Total*                 |                         | *50.366666667*          | *237.817341869*         |
 
 
-That's great and all, but $256 million in payroll is just a little bit steep. What if instead of just choosing the players with the highest expected fWAR, we chose the players with the highest expected fWAR per dollar they cost?
+That's great and all, but $238 million in payroll is just a little bit steep. What if instead of just choosing the players with the highest expected fWAR, we chose the players with the highest expected fWAR per dollar they cost?
 
 | Positions          | Player             | Exp. 2016 fWAR     | Exp. Salary        | Exp. Wins/$        |
 |--------------------|--------------------|--------------------|--------------------|--------------------|
@@ -58,7 +57,15 @@ That's great and all, but $256 million in payroll is just a little bit steep. Wh
 | P                  | J.A. Happ          | 2.533333333        | 11.01570681        | 0.229974651        |
 | P                  | David Price        | 6.3                | 27.54347826        | 0.228729282        |
 | P                  | Mark Buehrle       | 2.433333333        | 10.816             | 0.224975345        |
-| DH                 | Yoenis Cespedes    | 5.566666667        | 21.50456621        | 0.258859752        |
-| _Total_            |                    | _42.833333332_     | _179.287400968_    | _0.238908774965_   |
+| *Total*            |                    | *37.266666665*     | *157.782834758*    | *0.236189612908*   |
 
-Okay, $180 million is still pretty steep for a team with no bench and no bullpen. That being said, this team looks like it could win a lot of games while being $100 million less than the previous team. 
+Okay, $157 million is still pretty steep for a team with no bench and no bullpen. That being said, this team looks like it could win a lot of games while being $80 million less than the previous team.
+
+Anyways, that's all I have the energy for. Possible improvements to this analysis would be:
+
+1. Modify the Expected 2016 fWAR to be based on a projection system such as Steamer.
+2. Update the position listings to be more flexible. For instance, let LF/CF players play in RF.
+3. Add a DH. We will need to remove the player's defensive WAR for that analysis.
+4. Modify it so we can put a "hard cap" on the budget. I want to see what the best $100 million dollar FA team looks like.
+
+You can find the data and code used for this analysis on my [GitHub](https://github.com/ktarrant/freeAgents): 
