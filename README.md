@@ -61,6 +61,8 @@ That's great and all, but $238 million in payroll is just a little bit steep. Wh
 
 Okay, $157 million is still pretty steep for a team with no bench and no bullpen. That being said, this team looks like it could win a lot of games while being $80 million less than the previous team.
 
+According to [this link](http://www.fangraphs.com/library/misc/war/replacement-level/), a team of replacement level players should accumulate about 47.4 wins over a full season. So, assuming that for both these teams, you fill out your bullpen and bench with replacement level players, then you would expect the $238 million dollar team to win about 98 games and the $157 million dollar team to win about 88 games.
+
 Anyways, that's all I have the energy for. Possible improvements to this analysis would be:
 
 1. Modify the Expected 2016 fWAR to be based on a projection system such as Steamer.
@@ -68,4 +70,4 @@ Anyways, that's all I have the energy for. Possible improvements to this analysi
 3. Add a DH. We will need to remove the player's defensive WAR for that analysis.
 4. Modify it so we can put a "hard cap" on the budget. I want to see what the best $100 million dollar FA team looks like.
 
-You can find the data and code used for this analysis on my [GitHub](https://github.com/ktarrant/freeAgents): 
+You can find the data and code used for this analysis on my [GitHub](https://github.com/ktarrant/freeAgents).
