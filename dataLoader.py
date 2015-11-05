@@ -26,14 +26,15 @@ def loadData(filename):
 def printFields(fields, msgWidth=80):
     fieldWidth = msgWidth / len(fields)
     frmt = " %-" + str(fieldWidth - 1) + "s"
-    print "|".join([frmt % field for field in fields])
+    print "|" + "|".join([frmt % field for field in fields]) + "|"
 
-def printSeparator(msgWidth=80):
-    print "-" * msgWidth
+def printSeparator(fieldLen, msgWidth=80):
+    fieldWidth = msgWidth / fieldLen
+    print "|" + "|".join(["-" * fieldWidth] * fieldLen) + "|"
 
 def printPositions(positions):
     printFields(["Position", "# Players", "Total Exp. fWAR"])
-    printSeparator()
+    printSeparator(3)
     for position in positions:
         matchCount = len(positions[position])
         wars = [float(player["Exp. 2016 fWAR"]) for player in positions[position]]

@@ -31,7 +31,7 @@ def getHighestWar(positions, pos, usedPlayers=[]):
 	return bestPlayer
 
 dataLoader.printFields(["Positions", "Player", "Exp. 2016 fWAR", "Exp. Salary"])
-dataLoader.printSeparator()
+dataLoader.printSeparator(4)
 totalWar = 0
 totalSalary = 0
 usedPlayers = []
@@ -44,7 +44,7 @@ for pos in positionOrder:
 		totalWar += float(bestPlayer["Exp. 2016 fWAR"])
 		totalSalary += float(bestPlayer["Expected 2016 AAV"])
 
-dataLoader.printSeparator()
+dataLoader.printSeparator(4)
 dataLoader.printFields(["Total", "", totalWar, totalSalary])
 
 # def forEachPosition(keyList=[pos for pos in positions]):
