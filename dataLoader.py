@@ -23,12 +23,12 @@ def loadData(filename):
     return positions
 
 
-def printFields(fields, msgWidth=80):
+def printFields(fields, msgWidth=100):
     fieldWidth = msgWidth / len(fields)
     frmt = " %-" + str(fieldWidth - 1) + "s"
     print "|" + "|".join([frmt % field for field in fields]) + "|"
 
-def printSeparator(fieldLen, msgWidth=80):
+def printSeparator(fieldLen, msgWidth=100):
     fieldWidth = msgWidth / fieldLen
     print "|" + "|".join(["-" * fieldWidth] * fieldLen) + "|"
 
