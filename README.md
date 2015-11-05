@@ -20,7 +20,7 @@ The positions available in the 2016 FA class looks like this:
 | 3B                       | 3                        | 7.133333334              |
 
 
-If we were to just select the player with the highest expected fWAR for each position:
+If we were to just select the player with the highest expected fWAR for each position. For the purposes of this exercise, I am selecting five pitchers to make up the starting rotation:
 
 | Positions          | Player             | Exp. 2016 fWAR     | Exp. Salary        |
 |--------------------|--------------------|--------------------|--------------------|
@@ -35,7 +35,12 @@ If we were to just select the player with the highest expected fWAR for each pos
 | P                  | David Price        | 6.3                | 27.54347826        |
 | P                  | Zack Greinke       | 5.4                | 26.71084337        |
 | P                  | Johnny Cueto       | 4.266666667        | 21.01016949        |
+| P                  | Jordan Zimmermann  | 3.766666667        | 20.79234973        |
+| P                  | John Lackey        | 3.2                | 14.87323944        |
 | DH                 | Alex Gordon        | 4.066666667        | 18.64              |
-|--------------------|--------------------|--------------------|--------------------|
-| Total              |                    | 47.466666667       | 220.791752699      |
+| *Total*            |                    | *54.433333334*     | *256.457341869*    |
 
+
+That's great and all, but $256 million in payroll is just a little bit steep. Let's say that we want to cap the payroll at $160 million. What's the best team that we could put together?
+
+TODO: Add budget-limited analysis
