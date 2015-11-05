@@ -1,4 +1,4 @@
-# Analyzing Baseball Free Agent Class
+# Building a Team of Free Agents
 
 This is an attempt to build a competitive baseball team using only free agents. The inspiration for this is partly inspired by ["2015 All-Star Game Rosters if determined by fWAR"](https://www.reddit.com/r/baseball/comments/34xw91/2015_allstar_game_rosters_if_determined_by_fwar/) posted by /u/rjaspa and partly inspired by ["FanGraphs Crowd: The Top 82 Free Agents"](http://www.fangraphs.com/blogs/fangraphs-crowd-the-top-82-free-agents/).
 
