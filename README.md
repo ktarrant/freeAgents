@@ -39,7 +39,7 @@ If we were to just select the player with the highest expected fWAR for each pos
 | P                       | Jaime Garcia            | 2.9                     | 13.25988701             |
 | *Total*                 |                         | *40.7*                  | *230.65461837*          |
 
-According to [this link](http://www.fangraphs.com/library/misc/war/replacement-level/), a team of replacement level players should accumulate about 47.4 wins over a full season. Let's assume you made a team by signing all these players and then filling out your bullpen and bench with replacement level players. We would expect this team to win about 88.1 games. That's great and all, but $238 million in payroll is just a little bit steep. What if instead of just choosing the players with the highest expected fWAR, we chose the players with the highest expected fWAR per dollar they cost?
+According to [this link](http://www.fangraphs.com/library/misc/war/replacement-level/), a team of replacement level players should accumulate about 47.4 wins over a full season. Let's assume you made a team by signing all these players and then filling out your bullpen and bench with replacement level players. We would expect this team to win about 88.1 games. That's great and all, but $230 million in payroll is just a little bit steep. What if instead of just choosing the players with the highest expected fWAR, we chose the players with the highest expected fWAR per dollar they cost?
 
 | Positions          | Player             | Exp. 2016 fWAR     | Exp. Salary        | Exp. Wins/$        |
 |--------------------|--------------------|--------------------|--------------------|--------------------|
