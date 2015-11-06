@@ -13,9 +13,9 @@ The positions of the 82 free agents listed in the FanGraphs article are distribu
 | DH                              | 2                               | 0.6                             |
 | SS                              | 4                               | 5.0                             |
 | CF                              | 7                               | 7.5                             |
-| P                               | 41                              | 62.1                            |
+| P                               | 40                              | 59.2                            |
 | RF                              | 9                               | 8.6                             |
-| 1B                              | 5                               | 6.8                             |
+| 1B                              | 4                               | 5.4                             |
 | 2B                              | 6                               | 8.2                             |
 | 3B                              | 3                               | 4.8                             |
 
@@ -36,10 +36,10 @@ If we were to just select the player with the highest expected fWAR for each pos
 | P                       | Zack Greinke            | 4                       | 26.71084337             |
 | P                       | Hisashi Iwakuma         | 3.7                     | 14.48186528             |
 | P                       | Johnny Cueto            | 3                       | 21.01016949             |
-| P                       | Jaime Garcia            | 2.9                     | 13.25988701             |
-| *Total*                 |                         | *40.7*                  | *230.65461837*          |
+| P                       | Jordan Zimmermann       | 2.8                     | 20.79234973             |
+| *Total*                 |                         | *40.6*                  | *238.18708109*          |
 
-According to [this link](http://www.fangraphs.com/library/misc/war/replacement-level/), a team of replacement level players should accumulate about 47.4 wins over a full season. Let's assume you made a team by signing all these players and then filling out your bullpen and bench with replacement level players. We would expect this team to win about 88.1 games. That's great and all, but $230 million in payroll is just a little bit steep. What if instead of just choosing the players with the highest expected fWAR, we chose the players with the highest expected fWAR per dollar they cost?
+According to [this link](http://www.fangraphs.com/library/misc/war/replacement-level/), a team of replacement level players should accumulate about 47.4 wins over a full season. Let's assume you made a team by signing all these players and then filling out your bullpen and bench with replacement level players. We would expect this team to win about 88.0 games. That's great and all, but $238 million in payroll is just a little bit steep. What if instead of just choosing the players with the highest expected fWAR, we chose the players with the highest expected fWAR per dollar they cost?
 
 | Positions          | Player             | Exp. 2016 fWAR     | Exp. Salary        | Exp. Wins/$        |
 |--------------------|--------------------|--------------------|--------------------|--------------------|
@@ -54,11 +54,11 @@ According to [this link](http://www.fangraphs.com/library/misc/war/replacement-l
 | P                  | Bud Norris         | 1.9                | 6.388888889        | 0.297391304        |
 | P                  | Hisashi Iwakuma    | 3.7                | 14.48186528        | 0.25549195         |
 | P                  | Rich Hill          | 1.5                | 6.523809524        | 0.229927007        |
-| P                  | Jaime Garcia       | 2.9                | 13.25988701        | 0.218704729        |
 | P                  | Bartolo Colon      | 2.1                | 9.799180328        | 0.214303639        |
-| *Total*            |                    | *30.0*             | *142.007818248*    | *0.211255974285*   |
+| P                  | Wei-Yin Chen       | 2.6                | 13.09174312        | 0.198598458        |
+| *Total*            |                    | *29.7*             | *141.839674358*    | *0.209391343673*   |
 
-Howie Kendrick, Juan Uribe, Jimmy Rollins... is this the Dodgers? $142 million is still pretty steep for a team with no bench and no bullpen. But it's $90 million less than the previous team with only 10 less wins. If we did the same as above, where we filled out the bench and bullpen with replacement level players, we would expect this team to win about 77.6 games. 
+Howie Kendrick, Juan Uribe, Jimmy Rollins... is this the Dodgers? $142 million is still pretty steep for a team with no bench and no bullpen. But it's $90 million less than the previous team with only 10 less wins. If we did the same as above, where we filled out the bench and bullpen with replacement level players, we would expect this team to win about 77.1 games. 
 
 Anyways, that's all I have the energy for. Possible improvements to this analysis would be:
 

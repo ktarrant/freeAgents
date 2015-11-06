@@ -2,7 +2,7 @@ import os
 
 def loadData(filename):
     with open(filename, "r") as fobj:
-        lines = fobj.read().split("\r")
+        lines = fobj.read().split("\n")
         headers = [field.strip() for field in lines[0].split(",")]
         players = [ {
                 stat.strip(): value.strip() for (stat, value) 
