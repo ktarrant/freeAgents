@@ -24,12 +24,6 @@ If we were to just select the player with the highest expected fWAR for each pos
 
 | Positions               | Player                  | Exp. 2016 fWAR          | Exp. Salary             |
 |-------------------------|-------------------------|-------------------------|-------------------------|
-| P                       | David Price             | 5.3                     | 27.54347826             |
-| P                       | Zack Greinke            | 4                       | 26.71084337             |
-| P                       | Hisashi Iwakuma         | 3.7                     | 14.48186528             |
-| P                       | Johnny Cueto            | 3                       | 21.01016949             |
-| P                       | Jaime Garcia            | 2.9                     | 13.25988701             |
-| C                       | Matt Wieters            | 2.2                     | 12.64895636             |
 | CF                      | Denard Span             | 2.2                     | 11.96629213             |
 | LF                      | Alex Gordon             | 3.5                     | 18.64                   |
 | RF                      | Jason Heyward           | 4.7                     | 22.71539961             |
@@ -37,18 +31,18 @@ If we were to just select the player with the highest expected fWAR for each pos
 | 2B                      | Ben Zobrist             | 3.1                     | 14.14712154             |
 | 3B                      | Daniel Murphy           | 2.1                     | 12.6036961              |
 | SS                      | Ian Desmond             | 1.6                     | 14.4125                 |
+| C                       | Matt Wieters            | 2.2                     | 12.64895636             |
+| P                       | David Price             | 5.3                     | 27.54347826             |
+| P                       | Zack Greinke            | 4                       | 26.71084337             |
+| P                       | Hisashi Iwakuma         | 3.7                     | 14.48186528             |
+| P                       | Johnny Cueto            | 3                       | 21.01016949             |
+| P                       | Jaime Garcia            | 2.9                     | 13.25988701             |
 | *Total*                 |                         | *40.7*                  | *230.65461837*          |
 
 According to [this link](http://www.fangraphs.com/library/misc/war/replacement-level/), a team of replacement level players should accumulate about 47.4 wins over a full season. Let's assume you made a team by signing all these players and then filling out your bullpen and bench with replacement level players. We would expect this team to win about 88.1 games. That's great and all, but $238 million in payroll is just a little bit steep. What if instead of just choosing the players with the highest expected fWAR, we chose the players with the highest expected fWAR per dollar they cost?
 
 | Positions          | Player             | Exp. 2016 fWAR     | Exp. Salary        | Exp. Wins/$        |
 |--------------------|--------------------|--------------------|--------------------|--------------------|
-| P                  | Bud Norris         | 1.9                | 6.388888889        | 0.297391304        |
-| P                  | Hisashi Iwakuma    | 3.7                | 14.48186528        | 0.25549195         |
-| P                  | Rich Hill          | 1.5                | 6.523809524        | 0.229927007        |
-| P                  | Jaime Garcia       | 2.9                | 13.25988701        | 0.218704729        |
-| P                  | Bartolo Colon      | 2.1                | 9.799180328        | 0.214303639        |
-| C                  | Chris Iannetta     | 1.5                | 7.209476309        | 0.208059495        |
 | CF                 | Denard Span        | 2.2                | 11.96629213        | 0.183849765        |
 | LF                 | Ben Zobrist        | 3.1                | 14.14712154        | 0.219125848        |
 | RF                 | Jason Heyward      | 4.7                | 22.71539961        | 0.206908092        |
@@ -56,6 +50,12 @@ According to [this link](http://www.fangraphs.com/library/misc/war/replacement-l
 | 2B                 | Howie Kendrick     | 2.4                | 13.22995781        | 0.181406474        |
 | 3B                 | Juan Uribe         | 1.5                | 7.794776119        | 0.192436573        |
 | SS                 | Jimmy Rollins      | 1.3                | 7.432653061        | 0.174903899        |
+| C                  | Chris Iannetta     | 1.5                | 7.209476309        | 0.208059495        |
+| P                  | Bud Norris         | 1.9                | 6.388888889        | 0.297391304        |
+| P                  | Hisashi Iwakuma    | 3.7                | 14.48186528        | 0.25549195         |
+| P                  | Rich Hill          | 1.5                | 6.523809524        | 0.229927007        |
+| P                  | Jaime Garcia       | 2.9                | 13.25988701        | 0.218704729        |
+| P                  | Bartolo Colon      | 2.1                | 9.799180328        | 0.214303639        |
 | *Total*            |                    | *30.0*             | *142.007818248*    | *0.211255974285*   |
 
 Howie Kendrick, Juan Uribe, Jimmy Rollins... is this the Dodgers? $142 million is still pretty steep for a team with no bench and no bullpen. But it's $90 million less than the previous team with only 10 less wins. If we did the same as above, where we filled out the bench and bullpen with replacement level players, we would expect this team to win about 77.6 games. 
